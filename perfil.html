@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil · Panel</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="app-body">
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">Mi App</div>
+      <nav>
+        <a class="nav-link" href="dashboard.html">Inicio</a>
+        <a class="nav-link" href="productos.html">Productos</a>
+        <a class="nav-link active" href="perfil.html">Perfil</a>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="user-chip">
+          <span id="user-avatar" class="avatar">?</span>
+          <div>
+            <strong data-user-name>Usuario</strong>
+            <small data-user-email>—</small>
+          </div>
+        </div>
+        <button type="button" id="btn-logout" class="btn-logout">Cerrar sesión</button>
+      </div>
+    </aside>
+
+    <div class="content">
+      <header class="content-header">
+        <div>
+          <p class="eyebrow">Cuenta</p>
+          <h1>Mi perfil</h1>
+        </div>
+      </header>
+
+      <section class="panel">
+        <h2>Datos de Supabase Auth</h2>
+        <table class="info-table">
+          <tr>
+            <th>Nombre</th>
+            <td data-user-name>—</td>
+          </tr>
+          <tr>
+            <th>Correo</th>
+            <td data-user-email>—</td>
+          </tr>
+          <tr>
+            <th>User ID</th>
+            <td><code data-user-id>—</code></td>
+          </tr>
+        </table>
+        <p class="note">
+          En un proyecto real puedes guardar más datos en una tabla
+          <code>profiles</code> y leerlos con el cliente de Supabase.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Acciones de ejemplo</h2>
+        <p class="note">Botones de muestra (sin lógica extra):</p>
+        <p>
+          <button type="button" disabled>Editar perfil</button>
+          <button type="button" disabled>Cambiar contraseña</button>
+        </p>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/guard.js"></script>
+</body>
+
+</html>

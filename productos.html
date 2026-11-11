@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos · Panel</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/productos.css" />
+</head>
+<body class="app-body">
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">Mi App</div>
+      <nav>
+        <a class="nav-link" href="dashboard.html">Inicio</a>
+        <a class="nav-link active" href="productos.html">Productos</a>
+        <a class="nav-link" href="perfil.html">Perfil</a>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="user-chip">
+          <span id="user-avatar" class="avatar">?</span>
+          <div>
+            <strong data-user-name>Usuario</strong>
+            <small data-user-email>—</small>
+          </div>
+        </div>
+        <button type="button" id="btn-logout" class="btn-logout">Cerrar sesión</button>
+      </div>
+    </aside>
+
+    <div class="content">
+      <header class="content-header">
+        <div>
+          <p class="eyebrow">Inversiones</p>
+          <h1>Productos</h1>
+        </div>
+      </header>
+
+      <section class="panel">
+        <div class="toolbar">
+          <label>Buscar producto
+            <input id="buscador" type="search" placeholder="Bitcoin, Apple, fanta…" style="min-width: 260px" />
+          </label>
+        </div>
+
+        <p id="productos-message" class="message message--error" hidden></p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Producto</th>
+                <th class="num">Precio</th>
+                <th class="num">Stock</th>
+              </tr>
+            </thead>
+            <tbody id="productos-body">
+              <tr><td colspan="4" class="empty">Cargando productos…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/guard.js"></script>
+  <script src="js/productos.js"></script>
+</body>
+</html>

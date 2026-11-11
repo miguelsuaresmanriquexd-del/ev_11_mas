@@ -1,0 +1,76 @@
+/* Productos de inversión (se suma a styles.css) */
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.toolbar label {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #556677;
+}
+
+.toolbar select {
+  display: block;
+  margin-top: 4px;
+  padding: 8px;
+  min-width: 180px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.data-table th,
+.data-table td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid #e0e6eb;
+  vertical-align: top;
+}
+
+.data-table th {
+  color: #556677;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.data-table .num {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.data-table small {
+  display: block;
+  color: #778899;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.badge--bajo  { background: #e3f4e8; color: #1a7a3a; }
+.badge--medio { background: #fff3d6; color: #8a5a00; }
+.badge--alto  { background: #fde4e1; color: #b3261e; }
+
+.empty {
+  text-align: center;
+  color: #667788;
+  padding: 24px 8px;
+}

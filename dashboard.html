@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio · Panel</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="app-body">
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">Mi App</div>
+      <nav>
+        <a class="nav-link active" href="dashboard.html">Inicio</a>
+        <a class="nav-link" href="productos.html">Productos</a>
+        <a class="nav-link" href="perfil.html">Perfil</a>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="user-chip">
+          <span id="user-avatar" class="avatar">?</span>
+          <div>
+            <strong data-user-name>Usuario</strong>
+            <small data-user-email>—</small>
+          </div>
+        </div>
+        <button type="button" id="btn-logout" class="btn-logout">Cerrar sesión</button>
+      </div>
+    </aside>
+
+    <div class="content">
+      <header class="content-header">
+        <div>
+          <p class="eyebrow">Panel de ejemplo</p>
+          <h1>Hola, <span data-user-name>Usuario</span></h1>
+        </div>
+      </header>
+
+      <section class="cards">
+        <article class="card">
+          <p class="card-label">Sesión</p>
+          <p class="card-value ok">Activa</p>
+          <p class="card-hint">Auth con Supabase</p>
+        </article>
+        <article class="card">
+          <p class="card-label">Módulo</p>
+          <p class="card-value">Demo</p>
+          <p class="card-hint">Reemplaza por tus datos</p>
+        </article>
+        <article class="card">
+          <p class="card-label">Páginas</p>
+          <p class="card-value">2</p>
+          <p class="card-hint">Inicio y Perfil</p>
+        </article>
+      </section>
+
+      <section class="panel">
+        <h2>Resumen</h2>
+        <p>
+          Esta es una pantalla de muestra después del login.
+          En tu proyecto puedes poner aquí listados, métricas o accesos rápidos.
+        </p>
+        <ul class="simple-list">
+          <li>Navega a <a href="perfil.html">Perfil</a> para ver datos del usuario.</li>
+          <li>Ambas páginas están protegidas: sin sesión vuelves al login.</li>
+          <li>Cambia textos y menú según tu aplicación.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/guard.js"></script>
+</body>
+
+</html>
